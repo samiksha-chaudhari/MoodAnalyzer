@@ -10,10 +10,23 @@ namespace TestMood
         {
             string expected = "HAPPY";
             string message = "I am in happy mood";
-            
-            MoodAnalyzer1 moodAnalyzer = new MoodAnalyzer1(message);
+
+            PersonMoodAnalyzer moodAnalyzer = new PersonMoodAnalyzer(message);
             
             string mood = moodAnalyzer.AnalyzeMood();
+
+            Assert.AreEqual(expected, mood);
+        }
+
+        [TestMethod]
+        [DataRow(null)]
+        public void GivenHAPPYMoodShouldReturnHappy(string message)
+        {
+            string expected = "HAPPY";
+            PersonMoodAnalyzer moodAnalyzer = new PersonMoodAnalyzer(message);
+
+            string mood = moodAnalyzer.AnalyzeMood();
+
 
             Assert.AreEqual(expected, mood);
         }
