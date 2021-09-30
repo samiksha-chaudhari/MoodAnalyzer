@@ -36,7 +36,9 @@ namespace TestMood
 
             Assert.AreEqual(expected, mood);//assert
         }
-
+        /// <summary>
+        /// given empty mood should throw MoodAnalyzerException indicating empty mood
+        /// </summary>
         [TestMethod]
         public void MoodEmpty_Should_ThrowException()
         {
@@ -52,6 +54,9 @@ namespace TestMood
             }
 
         }
+        /// <summary>
+        /// given null mood should throw MoodAnalyzerException indicating null mood
+        /// </summary>
         [TestMethod]
         public void GivenMoodNull_ShouldThrowException()
         {
