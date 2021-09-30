@@ -7,11 +7,16 @@ namespace MoodAnalyzer
     public class PersonMoodAnalyzer
     {
         private string message;
+        //constructor
         public PersonMoodAnalyzer(string message)
         {
             this.message = message;
         }
 
+        /// <summary>
+        /// method to analyze mood 
+        /// </summary>
+        /// <returns></returns>
         public string AnalyzeMood()
         {
             /*
@@ -31,7 +36,7 @@ namespace MoodAnalyzer
                  return "HAPPY";
              }
             */
-
+            //use try catch for exception handling for empty and null message
             try
             {
                 if (this.message.Equals(string.Empty))
