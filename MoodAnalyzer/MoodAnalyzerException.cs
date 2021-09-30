@@ -9,11 +9,8 @@ namespace MoodAnalyzer
         public enum ExceptionType
         {
             NULL_MESSAGE,
-            EMPTY_MESSAGE,
-            NO_SUCH_FIELD,
-            NO_SUCH_METHOD,
-            NO_SUCH_CLASS,
-            OBJECT_CREATION_ISSUE
+            EMPTY_MESSAGE
+            
         }
         private readonly ExceptionType type;
         public MoodAnalyzerException(ExceptionType Type, String message) : base(message)
